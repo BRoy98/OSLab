@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <pthread.h>
 
-void printPrimeNumbers(int count)
+void *printPrimeNumbers(int count)
 {
     int printCount = 0;
     int num = 1;
@@ -8,19 +9,18 @@ void printPrimeNumbers(int count)
     while (printCount < count)
     {
         num++;
-        for (i = 2; i <= num - 1; i)
+        for (i = 2; i <= num - 1; i++)
         {
             if (num % i == 0)
                 break;
-            i++;
         }
         if (i >= num - 1)
         {
             printf("%d ", num);
-            count++;
+            printCount++;
         }
     }
-    printf("\n");
+    printf("\n\n");
 }
 
 int main()
@@ -35,6 +35,9 @@ int main()
         printf("You must enter a value greater than 1");
         return 1;
     }
-    printf("First %d prime numbers are: ", numCount);
-    printPrimeNumbers(numCount);
+    printf("\nFirst %d prime numbers are: ", numCount);
+
+    pthread_t primeThread;
+    pthread_create(&primeThread, NULL, &printPrimeNumbers, numCount);
+    pthread_join(primeThread, NULL);
 }
