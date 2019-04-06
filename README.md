@@ -11,3 +11,4 @@ This setup guide is for Linux and Mac
 4. Compile the code: `./compile.sh`
 5. You will get `multithreading.out` as the output of the C program
 6. Run Project 1 (Prime numbers using multithreading): `./multithreading.out`
+7. Run Project 2 (Banker's algorithm): `./bankers.out`
