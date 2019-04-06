@@ -27,7 +27,7 @@ int main()
 {
     int numCount;
 
-    printf("Enter the number of prime numbers you want to print: ");
+    printf("\nEnter the number of prime numbers you want to print: ");
     scanf("%d", &numCount);
 
     if (numCount < 1)
