@@ -9,6 +9,6 @@ This setup guide is for Linux and Mac
 2. Extract the folder and open terminal in the folder
 3. Make `compile.sh` file executable : `chmod +x compile.sh`.
 4. Compile the code: `./compile.sh`
-5. You will get `multithreading.out` as the output of the C program
+5. You will get `multithreading.out` and  `bankers.out` as the output of two C programs
 6. Run Project 1 (Prime numbers using multithreading): `./multithreading.out`
 7. Run Project 2 (Banker's algorithm): `./bankers.out`
